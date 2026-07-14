@@ -7,10 +7,10 @@ Published `ryde-play/incident-commander@sha-5623e2b1f9f3` as a runx skill for mo
 ## Artifacts
 
 - Registry: https://runx.ai/x/ryde-play/incident-commander@sha-5623e2b1f9f3
-- Source: https://github.com/RYDE-PLAY/runx/tree/f10a41dc04fe4a60462be48fcddee6268c01e8c0/skills/incident-commander
+- Source: https://github.com/RYDE-PLAY/runx/tree/56979dabba6aac159abc8de402bdb7e30c525ae9/skills/incident-commander
 - PR: https://github.com/runxhq/runx/pull/319
-- X.yaml: https://raw.githubusercontent.com/RYDE-PLAY/runx/f10a41dc04fe4a60462be48fcddee6268c01e8c0/skills/incident-commander/X.yaml
-- SKILL.md: https://raw.githubusercontent.com/RYDE-PLAY/runx/f10a41dc04fe4a60462be48fcddee6268c01e8c0/skills/incident-commander/SKILL.md
+- X.yaml: https://raw.githubusercontent.com/RYDE-PLAY/runx/56979dabba6aac159abc8de402bdb7e30c525ae9/skills/incident-commander/X.yaml
+- SKILL.md: https://raw.githubusercontent.com/RYDE-PLAY/runx/56979dabba6aac159abc8de402bdb7e30c525ae9/skills/incident-commander/SKILL.md
 - Dogfood receipt: `runx:receipt:sha256:0962f5586b010a4166174e37da6138076b43a50871fa0dd8b1d381dd15ae2251`
 
 ## Verification
