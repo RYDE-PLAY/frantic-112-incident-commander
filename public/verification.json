@@ -1,0 +1,112 @@
+{
+  "schema": "frantic.incident_commander.verification.v1",
+  "bounty": 112,
+  "claim_id": "frantic:claim:56986ab2-eb8f-4435-bd58-a733d1dc4f6b",
+  "package": "ryde-play/incident-commander@sha-5623e2b1f9f3",
+  "source_commit": "f10a41dc04fe4a60462be48fcddee6268c01e8c0",
+  "pr_url": "https://github.com/runxhq/runx/pull/319",
+  "checks": [
+    {
+      "id": "runx_version",
+      "status": "passed",
+      "evidence": "runx-cli 0.6.14"
+    },
+    {
+      "id": "local_harness",
+      "status": "passed",
+      "evidence": [
+        "status-update-approval-then-delivered",
+        "assign-missing-roster-owner-needs-agent"
+      ]
+    },
+    {
+      "id": "registry_publish",
+      "status": "passed",
+      "evidence": "publish status=published"
+    },
+    {
+      "id": "registry_read",
+      "status": "passed",
+      "evidence": "registry read JSON captured"
+    },
+    {
+      "id": "clean_install",
+      "status": "passed",
+      "evidence": "runx add captured in install.json"
+    },
+    {
+      "id": "dogfood",
+      "status": "passed",
+      "evidence": "runx:receipt:sha256:0962f5586b010a4166174e37da6138076b43a50871fa0dd8b1d381dd15ae2251"
+    },
+    {
+      "id": "runx_verify_plain",
+      "status": "passed",
+      "evidence": {
+        "schema": "runx.verify_verdict.v1",
+        "receipt_id": "sha256:0962f5586b010a4166174e37da6138076b43a50871fa0dd8b1d381dd15ae2251",
+        "valid": true,
+        "digest": {
+          "status": "valid",
+          "expected": "sha256:119a47e6df273d22aab8cdbd28c261d739fc94e71d4db595887e2dab2cea1cee",
+          "actual": "sha256:119a47e6df273d22aab8cdbd28c261d739fc94e71d4db595887e2dab2cea1cee"
+        },
+        "content_address": {
+          "status": "valid",
+          "expected": "sha256:0962f5586b010a4166174e37da6138076b43a50871fa0dd8b1d381dd15ae2251",
+          "actual": "sha256:0962f5586b010a4166174e37da6138076b43a50871fa0dd8b1d381dd15ae2251"
+        },
+        "signature": {
+          "mode": "production",
+          "status": "valid",
+          "kid": "incident-commander-dogfood-20260714190420"
+        },
+        "lineage": {
+          "status": "unverified",
+          "message": "single receipt verification cannot prove receipt-tree lineage"
+        },
+        "findings": []
+      }
+    },
+    {
+      "id": "source_alert_grounding",
+      "status": "passed",
+      "evidence": {
+        "monitor": "checkout-error-rate",
+        "ref": "monitor:checkout:error-rate:2026-07-14T10:40Z",
+        "status": "firing"
+      }
+    },
+    {
+      "id": "governed_outbound_named_run",
+      "status": "passed",
+      "evidence": {
+        "audience": {
+          "external": true,
+          "group": "checkout-oncall-and-customer-success",
+          "kind": "incident-stakeholders"
+        },
+        "channel": "#incidents",
+        "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+        "content_digest": "sha256:incident-update-checkout-20260714",
+        "principal": "user:sam",
+        "runner": "governed-outbound",
+        "skill": "governed-outbound",
+        "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+      }
+    },
+    {
+      "id": "receipt_act_review",
+      "status": "passed",
+      "evidence": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4"
+    }
+  ],
+  "links": {
+    "registry": "https://runx.ai/x/ryde-play/incident-commander@sha-5623e2b1f9f3",
+    "source": "https://github.com/RYDE-PLAY/runx/tree/f10a41dc04fe4a60462be48fcddee6268c01e8c0/skills/incident-commander",
+    "pr": "https://github.com/runxhq/runx/pull/319",
+    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/f10a41dc04fe4a60462be48fcddee6268c01e8c0/skills/incident-commander/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/f10a41dc04fe4a60462be48fcddee6268c01e8c0/skills/incident-commander/SKILL.md"
+  },
+  "receipt_ref": "runx:receipt:sha256:0962f5586b010a4166174e37da6138076b43a50871fa0dd8b1d381dd15ae2251"
+}

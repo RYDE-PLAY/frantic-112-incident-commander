@@ -1,0 +1,625 @@
+{
+  "closure": {
+    "closed_at": "2026-07-14T11:04:21.402Z",
+    "disposition": "closed",
+    "reason_code": "agent_act_closed",
+    "summary": "governed graph turn sealed"
+  },
+  "execution": {
+    "exit_code": 0,
+    "skill_claim": {
+      "graph": "incident-commander",
+      "graph_status": "Succeeded",
+      "step_outputs": {
+        "decide": {
+          "act_decision": "delivered",
+          "act_reason": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4",
+          "act_target_ref": "runx:incident:inc-checkout-20260714#turn-4",
+          "incident_turn": {
+            "data": {
+              "approval": {
+                "matched_roster": true,
+                "principal": "user:sam",
+                "reason": "comms lead approved stakeholder status update"
+              },
+              "case_id": "inc-checkout-20260714",
+              "dispatch": {
+                "lane": "governed-outbound",
+                "outcome": "sent",
+                "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+              },
+              "driver_id": "ryde-play-driver",
+              "escalation": null,
+              "incident_severity": "sev2",
+              "member_result": {
+                "outcome": "sent",
+                "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+              },
+              "named_run": {
+                "audience": {
+                  "external": true,
+                  "group": "checkout-oncall-and-customer-success",
+                  "kind": "incident-stakeholders"
+                },
+                "channel": "#incidents",
+                "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+                "content_digest": "sha256:incident-update-checkout-20260714",
+                "principal": "user:sam",
+                "runner": "governed-outbound",
+                "skill": "governed-outbound",
+                "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+              },
+              "objective": "send",
+              "prior_awaiting_approval": {
+                "approval_principal": "user:sam",
+                "named_run": {
+                  "audience": {
+                    "external": true,
+                    "group": "checkout-oncall-and-customer-success",
+                    "kind": "incident-stakeholders"
+                  },
+                  "channel": "#incidents",
+                  "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+                  "content_digest": "sha256:incident-update-checkout-20260714",
+                  "principal": "user:sam",
+                  "runner": "governed-outbound",
+                  "skill": "governed-outbound",
+                  "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+                },
+                "status": "awaiting_approval"
+              },
+              "reason": "roster approval matched and governed send receipt linked",
+              "schema": "runx.incident_commander.turn.v1",
+              "source_alert": {
+                "monitor": "checkout-error-rate",
+                "ref": "monitor:checkout:error-rate:2026-07-14T10:40Z",
+                "status": "firing"
+              },
+              "status": "delivered",
+              "turn": 4
+            }
+          },
+          "raw": "{\"act_decision\":\"delivered\",\"act_reason\":\"status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4\",\"act_target_ref\":\"runx:incident:inc-checkout-20260714#turn-4\",\"incident_turn\":{\"schema\":\"runx.incident_commander.turn.v1\",\"status\":\"delivered\",\"case_id\":\"inc-checkout-20260714\",\"turn\":4,\"driver_id\":\"ryde-play-driver\",\"objective\":\"send\",\"incident_severity\":\"sev2\",\"dispatch\":{\"lane\":\"governed-outbound\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\",\"outcome\":\"sent\"},\"escalation\":null,\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"reason\":\"roster approval matched and governed send receipt linked\",\"source_alert\":{\"monitor\":\"checkout-error-rate\",\"ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"status\":\"firing\"},\"approval\":{\"principal\":\"user:sam\",\"reason\":\"comms lead approved stakeholder status update\",\"matched_roster\":true},\"member_result\":{\"outcome\":\"sent\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\"},\"prior_awaiting_approval\":{\"status\":\"awaiting_approval\",\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"approval_principal\":\"user:sam\"}}}\n",
+          "skill_claim": {
+            "act_decision": "delivered",
+            "act_reason": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4",
+            "act_target_ref": "runx:incident:inc-checkout-20260714#turn-4",
+            "incident_turn": {
+              "approval": {
+                "matched_roster": true,
+                "principal": "user:sam",
+                "reason": "comms lead approved stakeholder status update"
+              },
+              "case_id": "inc-checkout-20260714",
+              "dispatch": {
+                "lane": "governed-outbound",
+                "outcome": "sent",
+                "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+              },
+              "driver_id": "ryde-play-driver",
+              "escalation": null,
+              "incident_severity": "sev2",
+              "member_result": {
+                "outcome": "sent",
+                "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+              },
+              "named_run": {
+                "audience": {
+                  "external": true,
+                  "group": "checkout-oncall-and-customer-success",
+                  "kind": "incident-stakeholders"
+                },
+                "channel": "#incidents",
+                "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+                "content_digest": "sha256:incident-update-checkout-20260714",
+                "principal": "user:sam",
+                "runner": "governed-outbound",
+                "skill": "governed-outbound",
+                "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+              },
+              "objective": "send",
+              "prior_awaiting_approval": {
+                "approval_principal": "user:sam",
+                "named_run": {
+                  "audience": {
+                    "external": true,
+                    "group": "checkout-oncall-and-customer-success",
+                    "kind": "incident-stakeholders"
+                  },
+                  "channel": "#incidents",
+                  "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+                  "content_digest": "sha256:incident-update-checkout-20260714",
+                  "principal": "user:sam",
+                  "runner": "governed-outbound",
+                  "skill": "governed-outbound",
+                  "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+                },
+                "status": "awaiting_approval"
+              },
+              "reason": "roster approval matched and governed send receipt linked",
+              "schema": "runx.incident_commander.turn.v1",
+              "source_alert": {
+                "monitor": "checkout-error-rate",
+                "ref": "monitor:checkout:error-rate:2026-07-14T10:40Z",
+                "status": "firing"
+              },
+              "status": "delivered",
+              "turn": 4
+            }
+          },
+          "status": "success",
+          "stderr": "",
+          "stdout": "{\"act_decision\":\"delivered\",\"act_reason\":\"status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4\",\"act_target_ref\":\"runx:incident:inc-checkout-20260714#turn-4\",\"incident_turn\":{\"schema\":\"runx.incident_commander.turn.v1\",\"status\":\"delivered\",\"case_id\":\"inc-checkout-20260714\",\"turn\":4,\"driver_id\":\"ryde-play-driver\",\"objective\":\"send\",\"incident_severity\":\"sev2\",\"dispatch\":{\"lane\":\"governed-outbound\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\",\"outcome\":\"sent\"},\"escalation\":null,\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"reason\":\"roster approval matched and governed send receipt linked\",\"source_alert\":{\"monitor\":\"checkout-error-rate\",\"ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"status\":\"firing\"},\"approval\":{\"principal\":\"user:sam\",\"reason\":\"comms lead approved stakeholder status update\",\"matched_roster\":true},\"member_result\":{\"outcome\":\"sent\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\"},\"prior_awaiting_approval\":{\"status\":\"awaiting_approval\",\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"approval_principal\":\"user:sam\"}}}\n"
+        }
+      },
+      "steps": [
+        {
+          "receipt_id": "sha256:83971e3a5ada4c356842722eb23f281fc419362bf8eaff7515fa137a7013a046",
+          "skill": "decide",
+          "status": "success",
+          "step_id": "decide"
+        }
+      ]
+    },
+    "stderr": "",
+    "stdout": "{\"graph\":\"incident-commander\",\"graph_status\":\"Succeeded\",\"step_outputs\":{\"decide\":{\"act_decision\":\"delivered\",\"act_reason\":\"status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4\",\"act_target_ref\":\"runx:incident:inc-checkout-20260714#turn-4\",\"incident_turn\":{\"data\":{\"approval\":{\"matched_roster\":true,\"principal\":\"user:sam\",\"reason\":\"comms lead approved stakeholder status update\"},\"case_id\":\"inc-checkout-20260714\",\"dispatch\":{\"lane\":\"governed-outbound\",\"outcome\":\"sent\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\"},\"driver_id\":\"ryde-play-driver\",\"escalation\":null,\"incident_severity\":\"sev2\",\"member_result\":{\"outcome\":\"sent\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\"},\"named_run\":{\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"channel\":\"#incidents\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\",\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"principal\":\"user:sam\",\"runner\":\"governed-outbound\",\"skill\":\"governed-outbound\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\"},\"objective\":\"send\",\"prior_awaiting_approval\":{\"approval_principal\":\"user:sam\",\"named_run\":{\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"channel\":\"#incidents\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\",\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"principal\":\"user:sam\",\"runner\":\"governed-outbound\",\"skill\":\"governed-outbound\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\"},\"status\":\"awaiting_approval\"},\"reason\":\"roster approval matched and governed send receipt linked\",\"schema\":\"runx.incident_commander.turn.v1\",\"source_alert\":{\"monitor\":\"checkout-error-rate\",\"ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"status\":\"firing\"},\"status\":\"delivered\",\"turn\":4}},\"raw\":\"{\\\"act_decision\\\":\\\"delivered\\\",\\\"act_reason\\\":\\\"status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4\\\",\\\"act_target_ref\\\":\\\"runx:incident:inc-checkout-20260714#turn-4\\\",\\\"incident_turn\\\":{\\\"schema\\\":\\\"runx.incident_commander.turn.v1\\\",\\\"status\\\":\\\"delivered\\\",\\\"case_id\\\":\\\"inc-checkout-20260714\\\",\\\"turn\\\":4,\\\"driver_id\\\":\\\"ryde-play-driver\\\",\\\"objective\\\":\\\"send\\\",\\\"incident_severity\\\":\\\"sev2\\\",\\\"dispatch\\\":{\\\"lane\\\":\\\"governed-outbound\\\",\\\"receipt_ref\\\":\\\"runx:receipt:sha256:governed-outbound-demo-send\\\",\\\"outcome\\\":\\\"sent\\\"},\\\"escalation\\\":null,\\\"named_run\\\":{\\\"skill\\\":\\\"governed-outbound\\\",\\\"runner\\\":\\\"governed-outbound\\\",\\\"principal\\\":\\\"user:sam\\\",\\\"channel\\\":\\\"#incidents\\\",\\\"audience\\\":{\\\"external\\\":true,\\\"group\\\":\\\"checkout-oncall-and-customer-success\\\",\\\"kind\\\":\\\"incident-stakeholders\\\"},\\\"content_digest\\\":\\\"sha256:incident-update-checkout-20260714\\\",\\\"source_alert_ref\\\":\\\"monitor:checkout:error-rate:2026-07-14T10:40Z\\\",\\\"command_hint\\\":\\\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\\\"},\\\"reason\\\":\\\"roster approval matched and governed send receipt linked\\\",\\\"source_alert\\\":{\\\"monitor\\\":\\\"checkout-error-rate\\\",\\\"ref\\\":\\\"monitor:checkout:error-rate:2026-07-14T10:40Z\\\",\\\"status\\\":\\\"firing\\\"},\\\"approval\\\":{\\\"principal\\\":\\\"user:sam\\\",\\\"reason\\\":\\\"comms lead approved stakeholder status update\\\",\\\"matched_roster\\\":true},\\\"member_result\\\":{\\\"outcome\\\":\\\"sent\\\",\\\"receipt_ref\\\":\\\"runx:receipt:sha256:governed-outbound-demo-send\\\"},\\\"prior_awaiting_approval\\\":{\\\"status\\\":\\\"awaiting_approval\\\",\\\"named_run\\\":{\\\"skill\\\":\\\"governed-outbound\\\",\\\"runner\\\":\\\"governed-outbound\\\",\\\"principal\\\":\\\"user:sam\\\",\\\"channel\\\":\\\"#incidents\\\",\\\"audience\\\":{\\\"external\\\":true,\\\"group\\\":\\\"checkout-oncall-and-customer-success\\\",\\\"kind\\\":\\\"incident-stakeholders\\\"},\\\"content_digest\\\":\\\"sha256:incident-update-checkout-20260714\\\",\\\"source_alert_ref\\\":\\\"monitor:checkout:error-rate:2026-07-14T10:40Z\\\",\\\"command_hint\\\":\\\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\\\"},\\\"approval_principal\\\":\\\"user:sam\\\"}}}\\n\",\"skill_claim\":{\"act_decision\":\"delivered\",\"act_reason\":\"status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4\",\"act_target_ref\":\"runx:incident:inc-checkout-20260714#turn-4\",\"incident_turn\":{\"approval\":{\"matched_roster\":true,\"principal\":\"user:sam\",\"reason\":\"comms lead approved stakeholder status update\"},\"case_id\":\"inc-checkout-20260714\",\"dispatch\":{\"lane\":\"governed-outbound\",\"outcome\":\"sent\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\"},\"driver_id\":\"ryde-play-driver\",\"escalation\":null,\"incident_severity\":\"sev2\",\"member_result\":{\"outcome\":\"sent\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\"},\"named_run\":{\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"channel\":\"#incidents\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\",\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"principal\":\"user:sam\",\"runner\":\"governed-outbound\",\"skill\":\"governed-outbound\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\"},\"objective\":\"send\",\"prior_awaiting_approval\":{\"approval_principal\":\"user:sam\",\"named_run\":{\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"channel\":\"#incidents\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\",\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"principal\":\"user:sam\",\"runner\":\"governed-outbound\",\"skill\":\"governed-outbound\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\"},\"status\":\"awaiting_approval\"},\"reason\":\"roster approval matched and governed send receipt linked\",\"schema\":\"runx.incident_commander.turn.v1\",\"source_alert\":{\"monitor\":\"checkout-error-rate\",\"ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"status\":\"firing\"},\"status\":\"delivered\",\"turn\":4}},\"status\":\"success\",\"stderr\":\"\",\"stdout\":\"{\\\"act_decision\\\":\\\"delivered\\\",\\\"act_reason\\\":\\\"status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4\\\",\\\"act_target_ref\\\":\\\"runx:incident:inc-checkout-20260714#turn-4\\\",\\\"incident_turn\\\":{\\\"schema\\\":\\\"runx.incident_commander.turn.v1\\\",\\\"status\\\":\\\"delivered\\\",\\\"case_id\\\":\\\"inc-checkout-20260714\\\",\\\"turn\\\":4,\\\"driver_id\\\":\\\"ryde-play-driver\\\",\\\"objective\\\":\\\"send\\\",\\\"incident_severity\\\":\\\"sev2\\\",\\\"dispatch\\\":{\\\"lane\\\":\\\"governed-outbound\\\",\\\"receipt_ref\\\":\\\"runx:receipt:sha256:governed-outbound-demo-send\\\",\\\"outcome\\\":\\\"sent\\\"},\\\"escalation\\\":null,\\\"named_run\\\":{\\\"skill\\\":\\\"governed-outbound\\\",\\\"runner\\\":\\\"governed-outbound\\\",\\\"principal\\\":\\\"user:sam\\\",\\\"channel\\\":\\\"#incidents\\\",\\\"audience\\\":{\\\"external\\\":true,\\\"group\\\":\\\"checkout-oncall-and-customer-success\\\",\\\"kind\\\":\\\"incident-stakeholders\\\"},\\\"content_digest\\\":\\\"sha256:incident-update-checkout-20260714\\\",\\\"source_alert_ref\\\":\\\"monitor:checkout:error-rate:2026-07-14T10:40Z\\\",\\\"command_hint\\\":\\\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\\\"},\\\"reason\\\":\\\"roster approval matched and governed send receipt linked\\\",\\\"source_alert\\\":{\\\"monitor\\\":\\\"checkout-error-rate\\\",\\\"ref\\\":\\\"monitor:checkout:error-rate:2026-07-14T10:40Z\\\",\\\"status\\\":\\\"firing\\\"},\\\"approval\\\":{\\\"principal\\\":\\\"user:sam\\\",\\\"reason\\\":\\\"comms lead approved stakeholder status update\\\",\\\"matched_roster\\\":true},\\\"member_result\\\":{\\\"outcome\\\":\\\"sent\\\",\\\"receipt_ref\\\":\\\"runx:receipt:sha256:governed-outbound-demo-send\\\"},\\\"prior_awaiting_approval\\\":{\\\"status\\\":\\\"awaiting_approval\\\",\\\"named_run\\\":{\\\"skill\\\":\\\"governed-outbound\\\",\\\"runner\\\":\\\"governed-outbound\\\",\\\"principal\\\":\\\"user:sam\\\",\\\"channel\\\":\\\"#incidents\\\",\\\"audience\\\":{\\\"external\\\":true,\\\"group\\\":\\\"checkout-oncall-and-customer-success\\\",\\\"kind\\\":\\\"incident-stakeholders\\\"},\\\"content_digest\\\":\\\"sha256:incident-update-checkout-20260714\\\",\\\"source_alert_ref\\\":\\\"monitor:checkout:error-rate:2026-07-14T10:40Z\\\",\\\"command_hint\\\":\\\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\\\"},\\\"approval_principal\\\":\\\"user:sam\\\"}}}\\n\"}},\"steps\":[{\"receipt_id\":\"sha256:83971e3a5ada4c356842722eb23f281fc419362bf8eaff7515fa137a7013a046\",\"skill\":\"decide\",\"status\":\"success\",\"step_id\":\"decide\"}]}",
+    "structured_output": {
+      "graph": "incident-commander",
+      "graph_status": "Succeeded",
+      "step_outputs": {
+        "decide": {
+          "act_decision": "delivered",
+          "act_reason": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4",
+          "act_target_ref": "runx:incident:inc-checkout-20260714#turn-4",
+          "incident_turn": {
+            "data": {
+              "approval": {
+                "matched_roster": true,
+                "principal": "user:sam",
+                "reason": "comms lead approved stakeholder status update"
+              },
+              "case_id": "inc-checkout-20260714",
+              "dispatch": {
+                "lane": "governed-outbound",
+                "outcome": "sent",
+                "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+              },
+              "driver_id": "ryde-play-driver",
+              "escalation": null,
+              "incident_severity": "sev2",
+              "member_result": {
+                "outcome": "sent",
+                "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+              },
+              "named_run": {
+                "audience": {
+                  "external": true,
+                  "group": "checkout-oncall-and-customer-success",
+                  "kind": "incident-stakeholders"
+                },
+                "channel": "#incidents",
+                "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+                "content_digest": "sha256:incident-update-checkout-20260714",
+                "principal": "user:sam",
+                "runner": "governed-outbound",
+                "skill": "governed-outbound",
+                "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+              },
+              "objective": "send",
+              "prior_awaiting_approval": {
+                "approval_principal": "user:sam",
+                "named_run": {
+                  "audience": {
+                    "external": true,
+                    "group": "checkout-oncall-and-customer-success",
+                    "kind": "incident-stakeholders"
+                  },
+                  "channel": "#incidents",
+                  "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+                  "content_digest": "sha256:incident-update-checkout-20260714",
+                  "principal": "user:sam",
+                  "runner": "governed-outbound",
+                  "skill": "governed-outbound",
+                  "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+                },
+                "status": "awaiting_approval"
+              },
+              "reason": "roster approval matched and governed send receipt linked",
+              "schema": "runx.incident_commander.turn.v1",
+              "source_alert": {
+                "monitor": "checkout-error-rate",
+                "ref": "monitor:checkout:error-rate:2026-07-14T10:40Z",
+                "status": "firing"
+              },
+              "status": "delivered",
+              "turn": 4
+            }
+          },
+          "raw": "{\"act_decision\":\"delivered\",\"act_reason\":\"status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4\",\"act_target_ref\":\"runx:incident:inc-checkout-20260714#turn-4\",\"incident_turn\":{\"schema\":\"runx.incident_commander.turn.v1\",\"status\":\"delivered\",\"case_id\":\"inc-checkout-20260714\",\"turn\":4,\"driver_id\":\"ryde-play-driver\",\"objective\":\"send\",\"incident_severity\":\"sev2\",\"dispatch\":{\"lane\":\"governed-outbound\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\",\"outcome\":\"sent\"},\"escalation\":null,\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"reason\":\"roster approval matched and governed send receipt linked\",\"source_alert\":{\"monitor\":\"checkout-error-rate\",\"ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"status\":\"firing\"},\"approval\":{\"principal\":\"user:sam\",\"reason\":\"comms lead approved stakeholder status update\",\"matched_roster\":true},\"member_result\":{\"outcome\":\"sent\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\"},\"prior_awaiting_approval\":{\"status\":\"awaiting_approval\",\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"approval_principal\":\"user:sam\"}}}\n",
+          "skill_claim": {
+            "act_decision": "delivered",
+            "act_reason": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4",
+            "act_target_ref": "runx:incident:inc-checkout-20260714#turn-4",
+            "incident_turn": {
+              "approval": {
+                "matched_roster": true,
+                "principal": "user:sam",
+                "reason": "comms lead approved stakeholder status update"
+              },
+              "case_id": "inc-checkout-20260714",
+              "dispatch": {
+                "lane": "governed-outbound",
+                "outcome": "sent",
+                "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+              },
+              "driver_id": "ryde-play-driver",
+              "escalation": null,
+              "incident_severity": "sev2",
+              "member_result": {
+                "outcome": "sent",
+                "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+              },
+              "named_run": {
+                "audience": {
+                  "external": true,
+                  "group": "checkout-oncall-and-customer-success",
+                  "kind": "incident-stakeholders"
+                },
+                "channel": "#incidents",
+                "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+                "content_digest": "sha256:incident-update-checkout-20260714",
+                "principal": "user:sam",
+                "runner": "governed-outbound",
+                "skill": "governed-outbound",
+                "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+              },
+              "objective": "send",
+              "prior_awaiting_approval": {
+                "approval_principal": "user:sam",
+                "named_run": {
+                  "audience": {
+                    "external": true,
+                    "group": "checkout-oncall-and-customer-success",
+                    "kind": "incident-stakeholders"
+                  },
+                  "channel": "#incidents",
+                  "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+                  "content_digest": "sha256:incident-update-checkout-20260714",
+                  "principal": "user:sam",
+                  "runner": "governed-outbound",
+                  "skill": "governed-outbound",
+                  "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+                },
+                "status": "awaiting_approval"
+              },
+              "reason": "roster approval matched and governed send receipt linked",
+              "schema": "runx.incident_commander.turn.v1",
+              "source_alert": {
+                "monitor": "checkout-error-rate",
+                "ref": "monitor:checkout:error-rate:2026-07-14T10:40Z",
+                "status": "firing"
+              },
+              "status": "delivered",
+              "turn": 4
+            }
+          },
+          "status": "success",
+          "stderr": "",
+          "stdout": "{\"act_decision\":\"delivered\",\"act_reason\":\"status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4\",\"act_target_ref\":\"runx:incident:inc-checkout-20260714#turn-4\",\"incident_turn\":{\"schema\":\"runx.incident_commander.turn.v1\",\"status\":\"delivered\",\"case_id\":\"inc-checkout-20260714\",\"turn\":4,\"driver_id\":\"ryde-play-driver\",\"objective\":\"send\",\"incident_severity\":\"sev2\",\"dispatch\":{\"lane\":\"governed-outbound\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\",\"outcome\":\"sent\"},\"escalation\":null,\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"reason\":\"roster approval matched and governed send receipt linked\",\"source_alert\":{\"monitor\":\"checkout-error-rate\",\"ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"status\":\"firing\"},\"approval\":{\"principal\":\"user:sam\",\"reason\":\"comms lead approved stakeholder status update\",\"matched_roster\":true},\"member_result\":{\"outcome\":\"sent\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\"},\"prior_awaiting_approval\":{\"status\":\"awaiting_approval\",\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"approval_principal\":\"user:sam\"}}}\n"
+        }
+      },
+      "steps": [
+        {
+          "receipt_id": "sha256:83971e3a5ada4c356842722eb23f281fc419362bf8eaff7515fa137a7013a046",
+          "skill": "decide",
+          "status": "success",
+          "step_id": "decide"
+        }
+      ]
+    }
+  },
+  "payload": {
+    "graph": "incident-commander",
+    "graph_status": "Succeeded",
+    "step_outputs": {
+      "decide": {
+        "act_decision": "delivered",
+        "act_reason": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4",
+        "act_target_ref": "runx:incident:inc-checkout-20260714#turn-4",
+        "incident_turn": {
+          "data": {
+            "approval": {
+              "matched_roster": true,
+              "principal": "user:sam",
+              "reason": "comms lead approved stakeholder status update"
+            },
+            "case_id": "inc-checkout-20260714",
+            "dispatch": {
+              "lane": "governed-outbound",
+              "outcome": "sent",
+              "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+            },
+            "driver_id": "ryde-play-driver",
+            "escalation": null,
+            "incident_severity": "sev2",
+            "member_result": {
+              "outcome": "sent",
+              "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+            },
+            "named_run": {
+              "audience": {
+                "external": true,
+                "group": "checkout-oncall-and-customer-success",
+                "kind": "incident-stakeholders"
+              },
+              "channel": "#incidents",
+              "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+              "content_digest": "sha256:incident-update-checkout-20260714",
+              "principal": "user:sam",
+              "runner": "governed-outbound",
+              "skill": "governed-outbound",
+              "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+            },
+            "objective": "send",
+            "prior_awaiting_approval": {
+              "approval_principal": "user:sam",
+              "named_run": {
+                "audience": {
+                  "external": true,
+                  "group": "checkout-oncall-and-customer-success",
+                  "kind": "incident-stakeholders"
+                },
+                "channel": "#incidents",
+                "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+                "content_digest": "sha256:incident-update-checkout-20260714",
+                "principal": "user:sam",
+                "runner": "governed-outbound",
+                "skill": "governed-outbound",
+                "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+              },
+              "status": "awaiting_approval"
+            },
+            "reason": "roster approval matched and governed send receipt linked",
+            "schema": "runx.incident_commander.turn.v1",
+            "source_alert": {
+              "monitor": "checkout-error-rate",
+              "ref": "monitor:checkout:error-rate:2026-07-14T10:40Z",
+              "status": "firing"
+            },
+            "status": "delivered",
+            "turn": 4
+          }
+        },
+        "raw": "{\"act_decision\":\"delivered\",\"act_reason\":\"status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4\",\"act_target_ref\":\"runx:incident:inc-checkout-20260714#turn-4\",\"incident_turn\":{\"schema\":\"runx.incident_commander.turn.v1\",\"status\":\"delivered\",\"case_id\":\"inc-checkout-20260714\",\"turn\":4,\"driver_id\":\"ryde-play-driver\",\"objective\":\"send\",\"incident_severity\":\"sev2\",\"dispatch\":{\"lane\":\"governed-outbound\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\",\"outcome\":\"sent\"},\"escalation\":null,\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"reason\":\"roster approval matched and governed send receipt linked\",\"source_alert\":{\"monitor\":\"checkout-error-rate\",\"ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"status\":\"firing\"},\"approval\":{\"principal\":\"user:sam\",\"reason\":\"comms lead approved stakeholder status update\",\"matched_roster\":true},\"member_result\":{\"outcome\":\"sent\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\"},\"prior_awaiting_approval\":{\"status\":\"awaiting_approval\",\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"approval_principal\":\"user:sam\"}}}\n",
+        "skill_claim": {
+          "act_decision": "delivered",
+          "act_reason": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4",
+          "act_target_ref": "runx:incident:inc-checkout-20260714#turn-4",
+          "incident_turn": {
+            "approval": {
+              "matched_roster": true,
+              "principal": "user:sam",
+              "reason": "comms lead approved stakeholder status update"
+            },
+            "case_id": "inc-checkout-20260714",
+            "dispatch": {
+              "lane": "governed-outbound",
+              "outcome": "sent",
+              "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+            },
+            "driver_id": "ryde-play-driver",
+            "escalation": null,
+            "incident_severity": "sev2",
+            "member_result": {
+              "outcome": "sent",
+              "receipt_ref": "runx:receipt:sha256:governed-outbound-demo-send"
+            },
+            "named_run": {
+              "audience": {
+                "external": true,
+                "group": "checkout-oncall-and-customer-success",
+                "kind": "incident-stakeholders"
+              },
+              "channel": "#incidents",
+              "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+              "content_digest": "sha256:incident-update-checkout-20260714",
+              "principal": "user:sam",
+              "runner": "governed-outbound",
+              "skill": "governed-outbound",
+              "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+            },
+            "objective": "send",
+            "prior_awaiting_approval": {
+              "approval_principal": "user:sam",
+              "named_run": {
+                "audience": {
+                  "external": true,
+                  "group": "checkout-oncall-and-customer-success",
+                  "kind": "incident-stakeholders"
+                },
+                "channel": "#incidents",
+                "command_hint": "runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>",
+                "content_digest": "sha256:incident-update-checkout-20260714",
+                "principal": "user:sam",
+                "runner": "governed-outbound",
+                "skill": "governed-outbound",
+                "source_alert_ref": "monitor:checkout:error-rate:2026-07-14T10:40Z"
+              },
+              "status": "awaiting_approval"
+            },
+            "reason": "roster approval matched and governed send receipt linked",
+            "schema": "runx.incident_commander.turn.v1",
+            "source_alert": {
+              "monitor": "checkout-error-rate",
+              "ref": "monitor:checkout:error-rate:2026-07-14T10:40Z",
+              "status": "firing"
+            },
+            "status": "delivered",
+            "turn": 4
+          }
+        },
+        "status": "success",
+        "stderr": "",
+        "stdout": "{\"act_decision\":\"delivered\",\"act_reason\":\"status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4\",\"act_target_ref\":\"runx:incident:inc-checkout-20260714#turn-4\",\"incident_turn\":{\"schema\":\"runx.incident_commander.turn.v1\",\"status\":\"delivered\",\"case_id\":\"inc-checkout-20260714\",\"turn\":4,\"driver_id\":\"ryde-play-driver\",\"objective\":\"send\",\"incident_severity\":\"sev2\",\"dispatch\":{\"lane\":\"governed-outbound\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\",\"outcome\":\"sent\"},\"escalation\":null,\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"reason\":\"roster approval matched and governed send receipt linked\",\"source_alert\":{\"monitor\":\"checkout-error-rate\",\"ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"status\":\"firing\"},\"approval\":{\"principal\":\"user:sam\",\"reason\":\"comms lead approved stakeholder status update\",\"matched_roster\":true},\"member_result\":{\"outcome\":\"sent\",\"receipt_ref\":\"runx:receipt:sha256:governed-outbound-demo-send\"},\"prior_awaiting_approval\":{\"status\":\"awaiting_approval\",\"named_run\":{\"skill\":\"governed-outbound\",\"runner\":\"governed-outbound\",\"principal\":\"user:sam\",\"channel\":\"#incidents\",\"audience\":{\"external\":true,\"group\":\"checkout-oncall-and-customer-success\",\"kind\":\"incident-stakeholders\"},\"content_digest\":\"sha256:incident-update-checkout-20260714\",\"source_alert_ref\":\"monitor:checkout:error-rate:2026-07-14T10:40Z\",\"command_hint\":\"runx skill governed-outbound -i url=<source> -i channel=<channel> -i principal=<principal>\"},\"approval_principal\":\"user:sam\"}}}\n"
+      }
+    },
+    "steps": [
+      {
+        "receipt_id": "sha256:83971e3a5ada4c356842722eb23f281fc419362bf8eaff7515fa137a7013a046",
+        "skill": "decide",
+        "status": "success",
+        "step_id": "decide"
+      }
+    ]
+  },
+  "receipt": {
+    "acts": [
+      {
+        "artifact_refs": [],
+        "closure": {
+          "closed_at": "2026-07-14T11:04:21.402Z",
+          "disposition": "closed",
+          "reason_code": "agent_act_closed",
+          "summary": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4"
+        },
+        "criterion_bindings": [
+          {
+            "criterion_id": "act_closed",
+            "evidence_refs": [],
+            "status": "verified",
+            "summary": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4",
+            "verification_refs": []
+          }
+        ],
+        "form": "review",
+        "id": "act_turn",
+        "intent": {
+          "constraints": [],
+          "derived_from": [],
+          "legitimacy": "Local operator supplied folded agency case state, source alert evidence, roster, approval, and member result for review.",
+          "purpose": "Review a monitor-backed incident agency turn and record the bounded command decision.",
+          "success_criteria": []
+        },
+        "source_refs": [],
+        "summary": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4",
+        "target_refs": []
+      }
+    ],
+    "authority": {
+      "actor_ref": {
+        "type": "principal",
+        "uri": "runx:principal:local_runtime"
+      },
+      "attenuation": {
+        "parent_authority_ref": null,
+        "subset_proof": null
+      },
+      "authority_proof_refs": [],
+      "enforcement": {
+        "profile_hash": "sha256:635fdb0a7eef93911e3c6bd0b25b5e635edba32e0259133042b3a5f1fb19394e",
+        "redaction_refs": [],
+        "setup_refs": [],
+        "teardown_refs": []
+      },
+      "grant_refs": [],
+      "scope_refs": [],
+      "terms": []
+    },
+    "canonicalization": "runx.receipt.c14n.v1",
+    "created_at": "2026-07-14T11:04:21.402Z",
+    "decisions": [
+      {
+        "artifact_refs": [],
+        "choice": "close",
+        "closure": {
+          "closed_at": "2026-07-14T11:04:21.402Z",
+          "disposition": "closed",
+          "reason_code": "agent_act_closed",
+          "summary": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4"
+        },
+        "decision_id": "dec_turn",
+        "inputs": {
+          "opportunity_refs": [],
+          "selection_ref": null,
+          "signal_refs": [],
+          "target_ref": null
+        },
+        "justification": {
+          "evidence_refs": [],
+          "summary": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4"
+        },
+        "proposed_intent": {
+          "constraints": [],
+          "derived_from": [],
+          "legitimacy": "Local operator supplied folded agency case state, source alert evidence, roster, approval, and member result for review.",
+          "purpose": "Review a monitor-backed incident agency turn and record the bounded command decision.",
+          "success_criteria": []
+        },
+        "selected_act_id": "act_turn",
+        "selected_harness_ref": null
+      }
+    ],
+    "digest": "sha256:119a47e6df273d22aab8cdbd28c261d739fc94e71d4db595887e2dab2cea1cee",
+    "id": "sha256:0962f5586b010a4166174e37da6138076b43a50871fa0dd8b1d381dd15ae2251",
+    "idempotency": {
+      "content_hash": "sha256:run_commander_801a216a47d0-turn-content",
+      "intent_key": "sha256:run_commander_801a216a47d0-turn-intent",
+      "trigger_fingerprint": "sha256:run_commander_801a216a47d0-turn-trigger"
+    },
+    "issuer": {
+      "kid": "incident-commander-dogfood-20260714190420",
+      "public_key_sha256": "sha256:61234746fea40036d1ff4a32f8eab8bdf49dbd03d037952ab0de60b006d58666",
+      "type": "hosted"
+    },
+    "lineage": {
+      "children": [],
+      "sync": []
+    },
+    "schema": "runx.receipt.v1",
+    "seal": {
+      "closed_at": "2026-07-14T11:04:21.402Z",
+      "criteria": [
+        {
+          "criterion_id": "act_closed",
+          "evidence_refs": [],
+          "status": "verified",
+          "summary": "status=delivered reason=roster approval matched and governed send receipt linked case=inc-checkout-20260714 turn=4",
+          "verification_refs": []
+        }
+      ],
+      "disposition": "closed",
+      "last_observed_at": "2026-07-14T11:04:21.402Z",
+      "reason_code": "agent_act_closed",
+      "summary": "governed graph turn sealed"
+    },
+    "signals": [],
+    "signature": {
+      "alg": "Ed25519",
+      "value": "base64:kW3Dqvvs5lfzVwTZtvm0gb5xAAgJdW1sczE-78qQNzafPUA6nKxkR7Bi_E6ZGlmzuzP_1GJPfhApCpH0U948CA"
+    },
+    "subject": {
+      "commitments": [],
+      "kind": "skill",
+      "ref": {
+        "type": "harness",
+        "uri": "hrn_run_commander_801a216a47d0_turn"
+      }
+    }
+  },
+  "receipt_id": "sha256:0962f5586b010a4166174e37da6138076b43a50871fa0dd8b1d381dd15ae2251",
+  "registry_provenance": {
+    "digest": "sha256:a5aafea0c5ab52b4c1e43ba816dda81b18791e373b9726891ad96394874bf446",
+    "profile_digest": "sha256:e340929829f7678f0c0c0090ce9cff37bb08b54509c3b0430574483e2a5aa29a",
+    "registry_key_id": "runx-registry-ed25519-v1",
+    "registry_source": "remote https://api.runx.ai",
+    "registry_source_fingerprint": "ba1ac16b631195fd",
+    "skill_id": "ryde-play/incident-commander",
+    "trust_state": "trusted",
+    "trust_tier": "community",
+    "version": "sha-5623e2b1f9f3"
+  },
+  "run_id": "run_commander_801a216a47d0",
+  "schema": "runx.skill_run.v1",
+  "skill_name": "incident-commander",
+  "status": "sealed"
+}

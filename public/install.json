@@ -1,0 +1,44 @@
+{
+  "status": "success",
+  "registry": {
+    "action": "install",
+    "source": "remote",
+    "ref": "ryde-play/incident-commander@sha-5623e2b1f9f3",
+    "install": {
+      "status": "installed",
+      "destination": "/tmp/frantic112-install/ryde-play/incident-commander/sha-5623e2b1f9f3/SKILL.md",
+      "skill_name": "incident-commander",
+      "source": "runx-registry",
+      "source_label": "runx registry",
+      "skill_id": "ryde-play/incident-commander",
+      "version": "sha-5623e2b1f9f3",
+      "digest": "sha256:a5aafea0c5ab52b4c1e43ba816dda81b18791e373b9726891ad96394874bf446",
+      "profile_digest": "sha256:e340929829f7678f0c0c0090ce9cff37bb08b54509c3b0430574483e2a5aa29a",
+      "profile_state_path": "/tmp/frantic112-install/ryde-play/incident-commander/sha-5623e2b1f9f3/.runx/profile.json",
+      "runner_names": [
+        "commander",
+        "incident_review"
+      ],
+      "trust_tier": "community"
+    },
+    "receipt_metadata": {
+      "destination": "/tmp/frantic112-install/ryde-play/incident-commander/sha-5623e2b1f9f3/SKILL.md",
+      "digest": "sha256:a5aafea0c5ab52b4c1e43ba816dda81b18791e373b9726891ad96394874bf446",
+      "install_count": 1,
+      "package_digest": "a4e573f03342e1200066bbcbaaad9d533b80fed2999b525e717baa2ec8b0d1bd",
+      "profile_digest": "sha256:e340929829f7678f0c0c0090ce9cff37bb08b54509c3b0430574483e2a5aa29a",
+      "publisher": {
+        "display_name": "RYDE",
+        "handle": "ryde-play",
+        "id": "user_0e65bd23969ab1dea100a77c",
+        "kind": "user"
+      },
+      "ref": "ryde-play/incident-commander@sha-5623e2b1f9f3",
+      "skill_id": "ryde-play/incident-commander",
+      "source_label": "runx registry",
+      "status": "installed",
+      "trust_tier": "community",
+      "version": "sha-5623e2b1f9f3"
+    }
+  }
+}

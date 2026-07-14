@@ -1,0 +1,51 @@
+{
+  "status": "success",
+  "registry": {
+    "action": "read",
+    "source": "remote",
+    "ref": "ryde-play/incident-commander@sha-5623e2b1f9f3",
+    "skill": {
+      "skill_id": "ryde-play/incident-commander",
+      "owner": "ryde-play",
+      "name": "incident-commander",
+      "description": "Coordinate one incident agency turn from monitor-backed case state, roster approval, and dispatch-by-naming to governed outbound communications.",
+      "category": "ops",
+      "version": "sha-5623e2b1f9f3",
+      "digest": "a5aafea0c5ab52b4c1e43ba816dda81b18791e373b9726891ad96394874bf446",
+      "markdown": "---\nname: incident-commander\ndescription: Coordinate one incident agency turn from monitor-backed case state, roster approval, and dispatch-by-naming to governed outbound communications.\nrunx:\n  category: ops\n---\n\n# Incident Commander\n\nIncident Commander is a thin review skill over the shipped agency spine. It\ndoes not reimplement durable state, mint authority, post messages, or call a\nprovider. It reads the folded incident case state produced by the agency turn,\nrequires that state to carry a real source alert or monitor event, checks the\nfixed incident roster, and emits one typed `incident_turn` decision.\n\nComms are dispatch-by-naming. A status update names the governed outbound lane\nthat will perform the send, with the principal, audience, channel, content\ndigest, and source alert bound as data. The first comms turn stays\n`awaiting_approval`. A later advance may mark it `delivered` only when the input\ncontains both a roster-matched approval and a `member_result.receipt_ref` from\nthe downstream governed send run.\n\n## What This Skill Does\n\n1. **Review monitor-backed case state.** `case_state.source_alert` must name the\n   monitor or alert event that opened or updated the incident.\n2. **Check the incident roster.** Every commander, responder, comms, approval,\n   and send principal must match a role in the folded case roster.\n3. **Coordinate comms safely.** A send objective returns a named\n   `governed-outbound` or `slack-notify` run and stops at approval until a\n   matching approval arrives.\n4. **Link delivery proof.** Delivered status requires a downstream send receipt\n   in `member_result.receipt_ref`.\n5. **Refuse unsafe moves.** Missing roster owners, missing source alerts,\n   unmatched approvals, missing send receipts, and resolution without evidence\n   all stop with `needs_agent` or `awaiting_approval`.\n\n## Contract Boundaries\n\n- **Typed inputs are required.**\n  - `case_id`\n  - `driver_id`\n  - `incident_objective`: `begin`, `assign`, `send`, `resolve`, or\n    `postmortem`\n  - `case_state`: folded state from the agency turn, including\n    `source_alert`\n  - `roster`: fixed incident roster from the agency case\n- **Optional inputs.**\n  - `approval`: `{ principal, reason }`\n  - `member_result`: `{ outcome, receipt_ref }`\n- **Typed output is one incident turn.**\n  - `incident_turn`: `{ status, case_id, turn, dispatch, escalation,\n    named_run, reason }`\n- **No provider effects.** This skill never sends a Slack message, email, or\n  customer notification. It names the governed outbound lane and requires that\n  lane's receipt before delivery is acknowledged.\n- **No data-store composition in graph.** The agency spine owns fold and CAS\n  append. This skill receives the folded projection as input and records the\n  decision as a sealed review act.\n\n## Decision Rules\n\n- `send`: if approval is absent, return `awaiting_approval` with a named\n  governed outbound run. If approval matches a roster principal and\n  `member_result.receipt_ref` is present, return `delivered` and link the send\n  receipt. If approval is present but no send receipt is linked, remain\n  `awaiting_approval`.\n- `assign`: require `case_state.assign_to` or `case_state.requested_owner` to\n  match a roster role. Missing owners return `needs_agent` with no named run.\n- `resolve`: require `member_result.receipt_ref` or\n  `case_state.resolution_evidence`. Without evidence, return `needs_agent`.\n- Never invent a commander, responder, comms lead, approval, source alert,\n  receipt, or resolution.\n\n## Output Shape\n\n```yaml\nincident_turn:\n  status: awaiting_approval | advanced | delivered | resolved | needs_agent\n  case_id: string\n  turn: number\n  dispatch: object | null\n  escalation: object | null\n  named_run: object | null\n  reason: string\n  source_alert: object\n  approval: object | null\n  member_result: object | null\n```\n\n## Inputs\n\n- `case_id` (required): incident case id.\n- `driver_id` (required): agency driver id; participates in the agency\n  contention lease outside this skill.\n- `incident_objective` (required): `begin`, `assign`, `send`, `resolve`, or\n  `postmortem`.\n- `case_state` (required): folded state from the agency turn.\n- `roster` (required): fixed incident roster.\n- `approval` (optional): roster principal approval for a consequential turn.\n- `member_result` (optional): downstream lane result, including receipt refs.",
+      "profile_digest": "e340929829f7678f0c0c0090ce9cff37bb08b54509c3b0430574483e2a5aa29a",
+      "runner_names": [
+        "commander",
+        "incident_review"
+      ],
+      "source_type": "agent",
+      "trust_tier": "community",
+      "required_scopes": [],
+      "tags": [],
+      "publisher": {
+        "kind": "user",
+        "id": "user_0e65bd23969ab1dea100a77c",
+        "handle": "ryde-play",
+        "display_name": "RYDE"
+      },
+      "attestations": [
+        {
+          "kind": "publisher",
+          "id": "publisher:user_0e65bd23969ab1dea100a77c",
+          "status": "declared",
+          "summary": "RYDE",
+          "issued_at": "2026-07-14T11:02:40.363Z",
+          "metadata": {
+            "publisher_display_name": "RYDE",
+            "publisher_handle": "ryde-play",
+            "publisher_id": "user_0e65bd23969ab1dea100a77c",
+            "publisher_kind": "user",
+            "trust_tier": "community"
+          }
+        }
+      ],
+      "install_command": "runx add ryde-play/incident-commander@sha-5623e2b1f9f3 --registry https://api.runx.ai",
+      "run_command": "runx skill ryde-play/incident-commander@sha-5623e2b1f9f3 --registry https://api.runx.ai"
+    }
+  }
+}
